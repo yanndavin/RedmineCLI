@@ -42,6 +42,7 @@ program
   .option('-p, --project <project>', 'Only display issues for the specified project.')
   .option('-P, --priority <priority>', 'Only display issues with specified priority.')
   .option('-a, --assignee <assignee>', 'Only display issues for the specified assignee.')
+  .option('-l, --limit <assignee>', 'Only display issues with the specified limit.')
   .option('-s, --status <status>', 'Only display issues with the specified status.')
   .option('-t, --tracker <tracker>', 'Only display issues for the specified tracker.')
   .option('-m, --me', 'Only display issues assigned to me.')

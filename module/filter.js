@@ -22,7 +22,8 @@ exports.issuesFiltersFrom = function(options){
     'priority_id': options.priority || null,
     'assigned_to_id': options.assignee || null,
     'status_id': options.status || null,
-    'tracker_id': options.tracker || null
+    'tracker_id': options.tracker || null,
+    'limit': options.limit || null
   };
 
   if(options.me) filters.assigned_to_id = 'me';
