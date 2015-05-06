@@ -126,7 +126,11 @@ exports.getProjectMembershipsGroupedByRole = function(identifier){
     for(var j = 0; j < membership.roles.length; j++){
       var role = membership.roles[j];
       if(!(role.name in roles)) roles[role.name] = {'name': role.name, 'members': []};
-      roles[role.name].members.push(membership.user.name);
+      if('user' in membership) {
+        roles[role.name].members.push(membership.user.name);
+      }else if('group' in membership){
+        roles[role.name].members.push(membership.group.name);
+      }
     }
   }
 
